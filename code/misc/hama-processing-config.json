@@ -1,0 +1,18 @@
+{
+  "job_id": "test",
+  "images_location": "images/experiment 9/100ms_without_BlackCover/",
+  "dataset":  "6Feb_light/STD/10/",
+  "flats_location": "6Feb_dome_flat/STD/10/",
+  "darks_location": "6Feb_dark/STD/1/",
+  "biases_location": "6Feb_bias/STD/0/",
+
+  "diagnostics": false,
+  "memorysaving": true,
+  "alignment": null,
+  "alignment_sample":{
+    "box_size": 200,
+    "function_type": "gaussian",
+    "width": 1
+  },
+  "debayer_matrix": false
+}

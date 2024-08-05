@@ -1,0 +1,18 @@
+{
+  "job_id": "Appended to output files. Defaults to yyyymmddhhmm if set to null",
+  "images_location": "folder where images are stored. All paths in config file must end with a /",
+  "dataset":  "list of subfolders where lights are stored",
+  "flats_location": "list of subfolders where flats are stored",
+  "darks_location": "and so on",
+  "biases_location": "",
+
+  "diagnostics": "for debugging alignment, saves plots of convolutions",
+  "memorysaving": "Uses disk instead of memory as buffer. Slow but prevents crashes from running out of memory. Forced to be true if over 30 images are being stacked." ,
+  "alignment_sample":{
+    "info": "set to null if images are already aligned",
+    "box_size": 200,
+    "function_type": "functional form of the image you want to detect. 'Gaussian' and 'lorentzian' currently allowed. Use 'first_image' if you want to use whatever's in the middle of the first image as the reference (box_size still applies)",
+    "width": 1
+  },
+  "debayer_matrix": "if your image is a colour image taken on a bayered sensor"
+}
