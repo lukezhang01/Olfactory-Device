@@ -7,7 +7,8 @@ Small Ximea
 
 Large Ximea
 
-<img width="352" alt="image" src="https://github.com/user-attachments/assets/e50911c9-2fb6-4a29-be0d-a44fa466a51c">
+<img width="355" alt="image" src="https://github.com/user-attachments/assets/43585229-512a-4615-b1e3-e1a710c90427">
+
 
 Notably the large Ximea camera has a higher average pixel value.
 Manually using DS9, I noticed a larger gap between the background and fluorescent pixel values. (*) That is, 
