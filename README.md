@@ -30,6 +30,8 @@ Flux calculation:
 Sum of : (intensity levels in the aperture - average intensity level in annulus)
 Uncertainty Calculation:
 
+<img width="602" alt="image" src="https://github.com/user-attachments/assets/bbc29820-deb0-43a4-a10d-9dafba8da131">
+
 Finally SNR=(Flux/Flux uncertainty)
 Fixes and updates to code:
 Last week, with help from Adi, we managed to debug all syntax errors that prevented the code from running. 
@@ -39,22 +41,35 @@ Additionally, if the pixel values are too similar, which may happen if the apert
 
 Attempted Autodetection
 From last week, both cameras had noise possibly in the lens or in the camera itself. The noise is about 1-2px wide and carries an extremely high pixel value, which affected the detection of DAOStarfinder
-For small Ximea
+For small Ximea:
 
-Same result for large Ximea
+<img width="635" alt="image" src="https://github.com/user-attachments/assets/3b045056-3084-4665-b362-8b2d4f339c1e">
+
+Same result for large Ximea:
+
+<img width="364" alt="image" src="https://github.com/user-attachments/assets/4d76ecd2-e288-4d9c-9806-40c12b370412">
 
 I tried to adjust parameters such as threshold or reducing clustering (see the top left light source in the large Ximea has many overlap detection) but it still only detects noise rather than the real light sources from cells.
 I tired to add a maximum intensity value as well as parameters such as sharplo=0.2, sharphi=1.0 for DAOStarfinder which should filter out huge spikes in pixel values. This seemed to have some effect on the large Ximea camera, however, the noise appears to vary in pixel value, so it is hard to filter them out without filtering out the real light sources from cells.
 Reducing max intensity:
 
+<img width="298" alt="image" src="https://github.com/user-attachments/assets/4437ca97-3051-4dc4-961d-cd6862fcda9a">
+
 Reducing it even more:
+
+<img width="291" alt="image" src="https://github.com/user-attachments/assets/b0db9530-a122-42c6-b009-557c21382400">
 
 As for the small Ximea camera, the DAOStarfinder cannot identify any real cell fluorescence. At the lowest possible max intensity cut off, it still only finds noise:
 
+<img width="296" alt="image" src="https://github.com/user-attachments/assets/c441ee50-a170-427b-bde0-d8f91096368d">
+
 If I set the threshold to be lower, then nothing is captured:
 
-Manual Detection
+<img width="295" alt="image" src="https://github.com/user-attachments/assets/64cfdd60-5861-42cf-8669-094349c18b6f">
 
+### Manual Detection SNR
+
+<img width="457" alt="image" src="https://github.com/user-attachments/assets/f0a7eb44-f672-47ce-bb5d-6a60e3bb4a42">
 
 Cell 1:
 Flux = 29199.86666666667, Flux uncertainty = 156.67286811852827
@@ -80,7 +95,7 @@ Cell 6:
 Flux = 27787.675555555554, Flux uncertainty = 148.8716641253053
 Signal to noise ratio = 186.65523569459575
 
-
+<img width="472" alt="image" src="https://github.com/user-attachments/assets/5ae32661-8c9e-4749-9b48-200f1ebdc771">
 
 Cell 1:
 Flux = 3049053.0082202256, Flux uncertainty = 945.4518237735476
@@ -107,7 +122,7 @@ Flux = 1810200.4047276466, Flux uncertainty = 785.0437422092123
 Signal to noise ratio = 2305.8592883417095
 
 
-Possible Next Steps
+### Possible Next Steps
 Improving autodetection so it is able to filter out noise more effectively (for the large Xiema only)
 I plan to ask Adi for further guidance in using the photutils and DAOStarfinder libraries
 Are there additional plots I should generate?
