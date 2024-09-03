@@ -1,6 +1,6 @@
+# Experiment 12 Flourescene Levels 
 
-Experiment 12 Flourescene Levels 
-Compare captured light levels with the same Min/Max Scale:
+### Compare captured light levels with the same Min/Max Scale:
 Small Ximea 
 
 <img width="351" alt="image" src="https://github.com/user-attachments/assets/c6b52fec-d618-4495-aa50-8ae680097ddd">
@@ -15,7 +15,7 @@ Manually using DS9, I noticed a larger gap between the background and fluorescen
 For the large Ximea, the fluorescence pixels are usually between 1000-1500 value while the background pixels are usually between 100-200 value 
 For the small Ximea, the fluorescence pixels are usually between 40-60 value while the background pixels are usually between 30-50 value
 
-SNR calculations
+### SNR calculations
 SNR Calculation Procedure:
 For each pixel (x, y) that is assumed to be the center of a light source, create a subimage centred around (x, y). The subimage is 2*boxsize in width and height, where boxsize is a hyperparameter. See example below:
 
