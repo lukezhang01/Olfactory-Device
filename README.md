@@ -19,6 +19,8 @@ SNR calculations
 SNR Calculation Procedure:
 For each pixel (x, y) that is assumed to be the center of a light source, create a subimage centred around (x, y). The subimage is 2*boxsize in width and height, where boxsize is a hyperparameter. See example below:
 
+<img width="450" alt="image" src="https://github.com/user-attachments/assets/31a643e1-11aa-47e6-a490-946be800918e">
+
 The std value is found by fitting all the intensity levels of each pixel in the subimage to a Gaussian distribution and taking the std of the distribution. 
 Draw aperture
 For each pixel (x, y), if the distance of (x, y) from the center is <= (1.5*std)**2, then it will be considered inside the aperture. Since (1.5*std)**2 is fixed for every image, then this will return a circle however, different images will have a different-sized aperture, depending on how much the light source deviates.
