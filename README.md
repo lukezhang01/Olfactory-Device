@@ -57,23 +57,23 @@ Manual Detection
 Cell 1:
 Flux = 29199.86666666667, Flux uncertainty = 156.67286811852827
 Signal to noise ratio = 186.3747502507964
----------
+
 Cell 2:
 Flux = 32518.43111111111, Flux uncertainty = 148.35183854569823
 Signal to noise ratio = 219.1980323930677
----------
+
 Cell 3:
 Flux = 7397.760000000006, Flux uncertainty = 112.34563814265096
 Signal to noise ratio = 65.84821736120004
----------
+
 Cell 4:
 Flux = 25424.87555555555, Flux uncertainty = 135.60028071258557
 Signal to noise ratio = 187.49869411734758
----------
+
 Cell 5:
 Flux = 33992.01333333333, Flux uncertainty = 154.40757125186306
 Signal to noise ratio = 220.1447316199735
----------
+
 Cell 6:
 Flux = 27787.675555555554, Flux uncertainty = 148.8716641253053
 Signal to noise ratio = 186.65523569459575
@@ -83,23 +83,23 @@ Signal to noise ratio = 186.65523569459575
 Cell 1:
 Flux = 3049053.0082202256, Flux uncertainty = 945.4518237735476
 Signal to noise ratio = 3224.969196262852
----------
+
 Cell 2:
 Flux = 1854200.8442689497, Flux uncertainty = 841.0128082173887
 Signal to noise ratio = 2204.7236690712416
----------
+
 Cell 3:
 Flux = 595092.7888799353, Flux uncertainty = 758.4066533267796
 Signal to noise ratio = 784.6618779905716
----------
+
 Cell 4:
 Flux = 1984799.4834810637, Flux uncertainty = 965.414499195535
 Signal to noise ratio = 2055.9039512405984
----------
+
 Cell 5:
 Flux = 1746027.942163934, Flux uncertainty = 855.273879414225
 Signal to noise ratio = 2041.4840020132315
----------
+
 Cell 6:
 Flux = 1810200.4047276466, Flux uncertainty = 785.0437422092123
 Signal to noise ratio = 2305.8592883417095
