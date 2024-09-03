@@ -126,10 +126,7 @@ Signal to noise ratio = 2305.8592883417095
 Improving autodetection so it is able to filter out noise more effectively (for the large Xiema only)
 I plan to ask Adi for further guidance in using the photutils and DAOStarfinder libraries
 Are there additional plots I should generate?
-Rei told me that his contract ended at the end of July. Are there any tasks I should do with the actual optical device without Rei?
 
-Confirm Flux, signal to noise ratio calculation
-Get autodetection working
 
 Number of pixels inside aperture 
 Show mask of the aperture 
