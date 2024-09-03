@@ -2,8 +2,10 @@
 Experiment 12 Flourescene Levels 
 Compare captured light levels with the same Min/Max Scale:
 Small Ximea 
+<img width="351" alt="image" src="https://github.com/user-attachments/assets/c6b52fec-d618-4495-aa50-8ae680097ddd">
 
 Large Ximea
+<img width="352" alt="image" src="https://github.com/user-attachments/assets/e50911c9-2fb6-4a29-be0d-a44fa466a51c">
 
 Notably the large Ximea camera has a higher average pixel value.
 Manually using DS9, I noticed a larger gap between the background and fluorescent pixel values. (*) That is, 
