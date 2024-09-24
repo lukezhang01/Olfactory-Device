@@ -1,3 +1,4 @@
+Outline of experiment can be found here: https://docs.google.com/document/d/1BuckM3dgzxQlzf2iB9w16xnlOVBJWG-d9uebHRNtUQo/edit#heading=h.mf4r9x54241h
 # Experiment 12 Flourescene Levels 
 
 ### Compare captured light levels with the same Min/Max Scale:
