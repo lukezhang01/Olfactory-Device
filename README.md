@@ -98,29 +98,24 @@ Signal to noise ratio = 186.65523569459575
 
 <img width="472" alt="image" src="https://github.com/user-attachments/assets/5ae32661-8c9e-4749-9b48-200f1ebdc771">
 
-Cell 1:
-Flux = 3049053.0082202256, Flux uncertainty = 945.4518237735476
-Signal to noise ratio = 3224.969196262852
+Cell 1: 
+Flux = 304905.3008220226, Flux uncertainty = 945.4518237735476, Signal to noise ratio = 322.4969196262852
 
-Cell 2:
-Flux = 1854200.8442689497, Flux uncertainty = 841.0128082173887
-Signal to noise ratio = 2204.7236690712416
+Cell 2: 
+Flux = 185420.08442689497, Flux uncertainty = 841.0128082173887, Signal to noise ratio = 220.47236690712416
 
-Cell 3:
-Flux = 595092.7888799353, Flux uncertainty = 758.4066533267796
-Signal to noise ratio = 784.6618779905716
+Cell 3: 
+Flux = 59509.27888799353, Flux uncertainty = 758.4066533267796, Signal to noise ratio = 78.46618779905716
 
-Cell 4:
-Flux = 1984799.4834810637, Flux uncertainty = 965.414499195535
-Signal to noise ratio = 2055.9039512405984
+Cell 4: 
+Flux = 198479.94834810637, Flux uncertainty = 965.414499195535, Signal to noise ratio = 205.59039512405985
 
-Cell 5:
-Flux = 1746027.942163934, Flux uncertainty = 855.273879414225
-Signal to noise ratio = 2041.4840020132315
+Cell 5: 
+Flux = 174602.7942163934, Flux uncertainty = 855.273879414225, Signal to noise ratio = 204.14840020132315
 
-Cell 6:
-Flux = 1810200.4047276466, Flux uncertainty = 785.0437422092123
-Signal to noise ratio = 2305.8592883417095
+Cell 6: 
+Flux = 181020.04047276466, Flux uncertainty = 785.0437422092123, Signal to noise ratio = 230.58592883417095
+
 
 
 ### Possible Next Steps
