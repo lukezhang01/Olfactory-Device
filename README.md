@@ -68,7 +68,7 @@ If I set the threshold to be lower, then nothing is captured:
 
 <img width="295" alt="image" src="https://github.com/user-attachments/assets/64cfdd60-5861-42cf-8669-094349c18b6f">
 
-### Manual Detection SNR
+### SNR with noise removal
 
 <img width="457" alt="image" src="https://github.com/user-attachments/assets/f0a7eb44-f672-47ce-bb5d-6a60e3bb4a42">
 
