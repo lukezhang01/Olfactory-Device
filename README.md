@@ -54,12 +54,13 @@ Determines the precise center of an object within a sub-image using intensity-we
 
 1. Calculating Weighted Centroids:
    - The center coordinates \((x_{\text{center}}, y_{\text{center}})\) are computed as:
- \[
- x_{\text{center}} = \frac{\sum_{x, y} x \cdot I(x, y)}{\sum_{x, y} I(x, y)}
- \]
- \[
- y_{\text{center}} = \frac{\sum_{x, y} y \cdot I(x, y)}{\sum_{x, y} I(x, y)}
- \]
+   
+\[
+x_{\text{center}} = \frac{\sum_{x, y} x \cdot I(x, y)}{\sum_{x, y} I(x, y)}
+\]
+\[
+y_{\text{center}} = \frac{\sum_{x, y} y \cdot I(x, y)}{\sum_{x, y} I(x, y)}
+\]
 
 2. Subpixel Precision:
    - Refines the center using Gaussian fitting for higher accuracy.
