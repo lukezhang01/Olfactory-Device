@@ -73,22 +73,27 @@ Calculates the flux (total light) from the object using an aperture-based method
 1. Total Flux Calculation:
    - Defines a circular aperture of radius `std_rad` around the object's center.
    - The flux is the sum of pixel intensities within the aperture:
+   
 $$
 \text{Flux} = \sum_{x, y \in \text{aperture}} I(x, y)
 $$
 
 4. Background Subtraction:
    - Corrects the flux by subtracting the background intensity:
+   
  $$
  \text{Corrected Flux} = \text{Flux} - \text{Background}
  $$
+
    - The background intensity is estimated using the mean or median of pixels outside the aperture.
 
 5. Flux Uncertainty:
    - Computes uncertainty using the standard deviation of pixel intensities:
+   
  $$
  \sigma_{\text{flux}} = \sqrt{\sum_{x, y \in \text{aperture}} (\sigma_{\text{intensity}}^2)}
  $$
+ 
 <img width="602" alt="image" src="https://github.com/user-attachments/assets/bbc29820-deb0-43a4-a10d-9dafba8da131">
 
 6. Signal Clipping:
@@ -98,9 +103,11 @@ $$
 
 ### `signal_to_noise(N_star, t, p, R, S_sky)`
 Calculates the signal-to-noise ratio using the formula:
+
 $$
 \text{SNR} = \frac{N_{\text{star}} \cdot t}{\sqrt{N_{\text{star}} \cdot t + p \cdot (S_{\text{sky}} + R^2)}}
 $$
+
 Where:
 - $N_{\text{star}}$: Count rate from the object (e-/s).
 - $t$: Exposure time (s).
@@ -208,8 +215,8 @@ Same result for large Ximea:
 
 <img width="364" alt="image" src="https://github.com/user-attachments/assets/4d76ecd2-e288-4d9c-9806-40c12b370412">
     
-    I tried to adjust parameters such as threshold or reducing clustering (see the top left light source in the large Ximea has many overlap detection) but it still only detects noise rather than the real light sources from cells.
-    I tired to add a maximum intensity value as well as parameters such as sharplo=0.2, sharphi=1.0 for DAOStarfinder which should filter out huge spikes in pixel values. This seemed to have some effect on the large Ximea camera, however, the noise appears to vary in pixel value, so it is hard to filter them out without filtering out the real light sources from cells.
+I tried to adjust parameters such as threshold or reducing clustering (see the top left light source in the large Ximea has many overlap detection) but it still only detects noise rather than the real light sources from cells.
+I tired to add a maximum intensity value as well as parameters such as sharplo=0.2, sharphi=1.0 for DAOStarfinder which should filter out huge spikes in pixel values. This seemed to have some effect on the large Ximea camera, however, the noise appears to vary in pixel value, so it is hard to filter them out without filtering out the real light sources from cells.
 Reducing max intensity:
 
 <img width="298" alt="image" src="https://github.com/user-attachments/assets/4437ca97-3051-4dc4-961d-cd6862fcda9a">
@@ -227,8 +234,8 @@ If I set the threshold to be lower, then nothing is captured:
 <img width="295" alt="image" src="https://github.com/user-attachments/assets/64cfdd60-5861-42cf-8669-094349c18b6f">
     
   2. Last week, with help from Adi, we managed to debug all syntax errors that prevented the code from running. 
-  Although the code ran, it contained many logical errors. I outlined the brief fixes that may have resulted in slightly different calculations below:
-  Recall calculations for ‘std’ value. I added edge cases that account for when the light source is very faint, resulting in a very flat Gaussian. It usually returns a very large std, but in the case it exceeds the boxsize/2, then std = boxsize/2. 
-  Additionally, if the pixel values are too similar, which may happen if the aperture is very small ends up only capturing the white part, then autocalculating std with numpy may result in NaN. So if this happens, then I set std to 0.01.
+Although the code ran, it contained many logical errors. I outlined the brief fixes that may have resulted in slightly different calculations below:
+Recall calculations for ‘std’ value. I added edge cases that account for when the light source is very faint, resulting in a very flat Gaussian. It usually returns a very large std, but in the case it exceeds the boxsize/2, then std = boxsize/2. 
+Additionally, if the pixel values are too similar, which may happen if the aperture is very small ends up only capturing the white part, then autocalculating std with numpy may result in NaN. So if this happens, then I set std to 0.01.
 
 
