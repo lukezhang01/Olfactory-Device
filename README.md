@@ -47,19 +47,19 @@ For the small Ximea, the fluorescence pixels are usually between 40-60 value whi
   1. Extracts a subsection of the image centered at (x_coord, y_coord) with dimensions defined by boxsize.
     For each pixel (x, y) that is assumed to be the center of a light source, create a subimage centred around (x, y). The subimage is 2*boxsize in width and height, where boxsize is a hyperparameter. See example below:
 
-    <img width="450" alt="image" src="https://github.com/user-attachments/assets/31a643e1-11aa-47e6-a490-946be800918e">
+<img width="450" alt="image" src="https://github.com/user-attachments/assets/31a643e1-11aa-47e6-a490-946be800918e">
 
 ### `find_exact_center(sub_im)`
 Determines the precise center of an object within a sub-image using intensity-weighted statistics:
 
 1. Calculating Weighted Centroids:
    - The center coordinates \((x_{\text{center}}, y_{\text{center}})\) are computed as:
-     \[
-     x_{\text{center}} = \frac{\sum_{x, y} x \cdot I(x, y)}{\sum_{x, y} I(x, y)}
-     \]
-     \[
-     y_{\text{center}} = \frac{\sum_{x, y} y \cdot I(x, y)}{\sum_{x, y} I(x, y)}
-     \]
+ \[
+ x_{\text{center}} = \frac{\sum_{x, y} x \cdot I(x, y)}{\sum_{x, y} I(x, y)}
+ \]
+ \[
+ y_{\text{center}} = \frac{\sum_{x, y} y \cdot I(x, y)}{\sum_{x, y} I(x, y)}
+ \]
 
 2. Subpixel Precision:
    - Refines the center using Gaussian fitting for higher accuracy.
@@ -88,7 +88,7 @@ Calculates the flux (total light) from the object using an aperture-based method
      \[
      \sigma_{\text{flux}} = \sqrt{\sum_{x, y \in \text{aperture}} (\sigma_{\text{intensity}}^2)}
      \]
-  <img width="602" alt="image" src="https://github.com/user-attachments/assets/bbc29820-deb0-43a4-a10d-9dafba8da131">
+<img width="602" alt="image" src="https://github.com/user-attachments/assets/bbc29820-deb0-43a4-a10d-9dafba8da131">
 
 6. Signal Clipping:
    - Removes extreme outliers based on statistical thresholds.
@@ -196,33 +196,34 @@ Flux = 174602.7942163934, Flux uncertainty = 855.273879414225, Signal to noise r
 
 Cell 6: 
 Flux = 181020.04047276466, Flux uncertainty = 785.0437422092123, Signal to noise ratio = 230.58592883417095
+
 **Attempted Autodetection**
   1. From last week, both cameras had noise possibly in the lens or in the camera itself. The noise is about 1-2px wide and carries an extremely high pixel value, which affected the detection of DAOStarfinder
     For small Ximea:
-    
-    <img width="635" alt="image" src="https://github.com/user-attachments/assets/3b045056-3084-4665-b362-8b2d4f339c1e">
-    
-    Same result for large Ximea:
-    
-    <img width="364" alt="image" src="https://github.com/user-attachments/assets/4d76ecd2-e288-4d9c-9806-40c12b370412">
+
+<img width="635" alt="image" src="https://github.com/user-attachments/assets/3b045056-3084-4665-b362-8b2d4f339c1e">
+
+Same result for large Ximea:
+
+<img width="364" alt="image" src="https://github.com/user-attachments/assets/4d76ecd2-e288-4d9c-9806-40c12b370412">
     
     I tried to adjust parameters such as threshold or reducing clustering (see the top left light source in the large Ximea has many overlap detection) but it still only detects noise rather than the real light sources from cells.
     I tired to add a maximum intensity value as well as parameters such as sharplo=0.2, sharphi=1.0 for DAOStarfinder which should filter out huge spikes in pixel values. This seemed to have some effect on the large Ximea camera, however, the noise appears to vary in pixel value, so it is hard to filter them out without filtering out the real light sources from cells.
-    Reducing max intensity:
-    
-    <img width="298" alt="image" src="https://github.com/user-attachments/assets/4437ca97-3051-4dc4-961d-cd6862fcda9a">
-    
-    Reducing it even more:
-    
-    <img width="291" alt="image" src="https://github.com/user-attachments/assets/b0db9530-a122-42c6-b009-557c21382400">
-    
-    As for the small Ximea camera, the DAOStarfinder cannot identify any real cell fluorescence. At the lowest possible max intensity cut off, it still only finds noise:
-    
-    <img width="296" alt="image" src="https://github.com/user-attachments/assets/c441ee50-a170-427b-bde0-d8f91096368d">
-    
-    If I set the threshold to be lower, then nothing is captured:
-    
-    <img width="295" alt="image" src="https://github.com/user-attachments/assets/64cfdd60-5861-42cf-8669-094349c18b6f">
+Reducing max intensity:
+
+<img width="298" alt="image" src="https://github.com/user-attachments/assets/4437ca97-3051-4dc4-961d-cd6862fcda9a">
+
+Reducing it even more:
+
+<img width="291" alt="image" src="https://github.com/user-attachments/assets/b0db9530-a122-42c6-b009-557c21382400">
+
+As for the small Ximea camera, the DAOStarfinder cannot identify any real cell fluorescence. At the lowest possible max intensity cut off, it still only finds noise:
+
+<img width="296" alt="image" src="https://github.com/user-attachments/assets/c441ee50-a170-427b-bde0-d8f91096368d">
+
+If I set the threshold to be lower, then nothing is captured:
+
+<img width="295" alt="image" src="https://github.com/user-attachments/assets/64cfdd60-5861-42cf-8669-094349c18b6f">
     
   2. Last week, with help from Adi, we managed to debug all syntax errors that prevented the code from running. 
   Although the code ran, it contained many logical errors. I outlined the brief fixes that may have resulted in slightly different calculations below:
