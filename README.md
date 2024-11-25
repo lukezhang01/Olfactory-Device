@@ -74,21 +74,21 @@ Calculates the flux (total light) from the object using an aperture-based method
    - Defines a circular aperture of radius `std_rad` around the object's center.
    - The flux is the sum of pixel intensities within the aperture:
 $$
-   \text{Flux} = \sum_{x, y \in \text{aperture}} I(x, y)
+\text{Flux} = \sum_{x, y \in \text{aperture}} I(x, y)
 $$
 
 4. Background Subtraction:
    - Corrects the flux by subtracting the background intensity:
-     $$
-     \text{Corrected Flux} = \text{Flux} - \text{Background}
-     $$
+ $$
+ \text{Corrected Flux} = \text{Flux} - \text{Background}
+ $$
    - The background intensity is estimated using the mean or median of pixels outside the aperture.
 
 5. Flux Uncertainty:
    - Computes uncertainty using the standard deviation of pixel intensities:
-     $$
-     \sigma_{\text{flux}} = \sqrt{\sum_{x, y \in \text{aperture}} (\sigma_{\text{intensity}}^2)}
-     $$
+ $$
+ \sigma_{\text{flux}} = \sqrt{\sum_{x, y \in \text{aperture}} (\sigma_{\text{intensity}}^2)}
+ $$
 <img width="602" alt="image" src="https://github.com/user-attachments/assets/bbc29820-deb0-43a4-a10d-9dafba8da131">
 
 6. Signal Clipping:
