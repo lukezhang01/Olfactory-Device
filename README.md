@@ -8,6 +8,18 @@ Outline of experiment can be found here: https://docs.google.com/document/d/1Buc
 ## Overview
 This project implements a procedure to detect and analyze objects (e.g., cells) in images based on their flux and signal-to-noise ratio (SNR). The script processes image data, calculates flux for regions of interest, and evaluates the SNR for better object characterization.
 
+Original Set up:
+
+<img width="609" alt="image" src="https://github.com/user-attachments/assets/4d5abc9a-d530-4b8c-b1e4-732a18d7dea7">
+
+New Set up:
+
+<img width="590" alt="image" src="https://github.com/user-attachments/assets/29da21d9-9e13-448c-aad1-b258f6a783c2">
+
+<img width="546" alt="image" src="https://github.com/user-attachments/assets/ad0a9f2f-165b-4343-b294-97497a847563">
+
+
+
 ### Camera Models:
 Small Ximea 
 
