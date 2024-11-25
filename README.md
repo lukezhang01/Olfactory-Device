@@ -53,7 +53,7 @@ For the small Ximea, the fluorescence pixels are usually between 40-60 value whi
 Determines the precise center of an object within a sub-image using intensity-weighted statistics:
 
 1. Calculating Weighted Centroids:
-   - The center coordinates \((x_{\text{center}}, y_{\text{center}})\) are computed as:
+   - The center coordinates $(x_{\text{center}}, y_{\text{center}})$ are computed as:
    
 $$
 x_{\text{center}} = \frac{\sum_{x, y} x \cdot I(x, y)}{\sum_{x, y} I(x, y)}
@@ -73,9 +73,9 @@ Calculates the flux (total light) from the object using an aperture-based method
 1. Total Flux Calculation:
    - Defines a circular aperture of radius `std_rad` around the object's center.
    - The flux is the sum of pixel intensities within the aperture:
-     \[
+$$
      \text{Flux} = \sum_{x, y \in \text{aperture}} I(x, y)
-     \]
+$$
 
 4. Background Subtraction:
    - Corrects the flux by subtracting the background intensity:
